@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="my project">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Makho kukhianidze">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Max's Zoo</title>
+    <link rel="icon" href="assets/icons/m.png" type="image/x-icon">
+</head>
+
+<body onload="startTime()">
+
+    <!-- Mobile, tablet menu  device - Start -->
+    <div class="mobile-container">
+        <div class="topnav">
+            <a href="index.html"><img src="assets/image/logo/max-logo.png" alt="logo"></a>
+            <p style="padding:12px;color:white;margin:0;text-indent:0;font-size:14px;">Max's National Park </p>
+            <div id="myLinks">
+                <a style="background:#5a4848;" href="#">Home</a>
+                <a href="assets/pages/Gallery.html">Gallery</a>
+                <a href="assets/pages/About_us.html">About us</a>
+                <a href="assets/pages/Contact.html">Contact</a>
+                <a href="assets/pages/Login.html">Login in</a>
+                <a href="assets/pages/Signup.html">Sign up</a>
+                <a onclick="darkMode()" style="cursor:pointer;">Dark mode</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Tools</button>
+                    <div class="dropdown-content">
+                        <div>
+                            <a class="font-size">Font size:</a>
+                            <a onclick="small()">Small Fonts</a>
+                            <a onclick="Normal()">Normal Fonts</a>
+                            <a onclick="Medium()">Medium Fonts</a>
+                            <a onclick="Large()">Large Fonts</a>
+                        </div>
+                        <div>
+                            <a class="font-color">Font color:</a>
+                            <a onclick="original()">Original Fonts</a>
+                            <a onclick="blue()">Blue Fonts</a>
+                            <a onclick="black()">Black Fonts</a>
+                            <a onclick="red()">Red Fonts</a>
+                            <a onclick="pink()">Pink Fonts</a>
+                        </div>
+                        <div>
+                            <a class="font-text">Font:</a>
+                            <a onclick="fontFantasy()">Original Font</a>
+                            <a onclick="fontCursive()">Cursive Font</a>
+                            <a onclick="fontMonospace()">Monosp Font</a>
+                            <a onclick="fontSansSerif()">SansSe Font</a>
+                            <a onclick="fontSerif()">Serif Font</a>
+                        </div>
+                        <div>
+                            <a class="font-text">Background:</a>
+                            <a onclick="originalColor()">Original Color</a>
+                            <a onclick="backgroundColorRed()">Red</a>
+                            <a onclick="backgroundColorblue()">Blue</a>
+                            <a onclick="backgroundColorOrange()">Orange</a>
+                            <a onclick="backgroundColorGreen()">Green</a>
+                        </div>
+                        <div>
+                            <a class="font-text">Title Color:</a>
+                            <a onclick="OriginalColor()">Original title</a>
+                            <a onclick="titleColorRed()">Red title</a>
+                            <a onclick="titleColorblue()">Blue title</a>
+                            <a onclick="titleColorpink()">Pink title</a>
+                            <a onclick="titleColororange()">Orange title</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Mobile, tablet menu  device - End -->
+
+    <!-- Header - Start -->
+    <header>
+        <div class="for-users">
+            <div class="text-for-users">
+                <iframe width="547" height="309" class="video_yt_style" style="margin-bottom: 11px;"
+                    src="https://www.youtube.com/embed/4O-ey6ChreU?start=56" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p class="text"><span>we are always open</span> </p>
+                <p id="clock"></p>
+                <p id="year"></p>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="header-position">
+                <div id="logo-disable" class="logo"> <a href="index.html"><img src="assets/image/logo/max-logo.png"
+                            alt="logo"></a></div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a style="background:#5a4848;" href="#">Home</a></li>
+                        <li><a href="assets/pages/Gallery.html">Gallery</a></li>
+                        <li><a href="assets/pages/About_us.html">About us</a></li>
+                        <li><a href="assets/pages/Contact.html">Contact</a></li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Tools</button>
+                            <div class="dropdown-content">
+                                <div class="dropdown_menu_style">
+                                    <a class="font-size">Font size:</a>
+                                    <a onclick="small()">Small Fonts</a>
+                                    <a onclick="Normal()">Normal Fonts</a>
+                                    <a onclick="Medium()">Medium Fonts</a>
+                                    <a onclick="Large()">Large Fonts</a>
+                                </div>
+                                <div class="dropdown_menu_style">
+                                    <a class="font-color">Font color:</a>
+                                    <a onclick="original()">Original Fonts</a>
+                                    <a onclick="blue()">Blue Fonts</a>
+                                    <a onclick="black()">Black Fonts</a>
+                                    <a onclick="red()">Red Fonts</a>
+                                    <a onclick="pink()">Pink Fonts</a>
+                                </div>
+                                <div class="dropdown_menu_style">
+                                    <a class="font-text">Font:</a>
+                                    <a onclick="fontFantasy()">Original Font</a>
+                                    <a onclick="fontCursive()">Cursive Font</a>
+                                    <a onclick="fontMonospace()">Monosp Font</a>
+                                    <a onclick="fontSansSerif()">SansSe Font</a>
+                                    <a onclick="fontSerif()">Serif Font</a>
+                                </div>
+                                <div class="dropdown_menu_style">
+                                    <a class="font-text">Background:</a>
+                                    <a onclick="originalColor()">Original Color</a>
+                                    <a onclick="backgroundColorRed()">Red</a>
+                                    <a onclick="backgroundColorblue()">Blue</a>
+                                    <a onclick="backgroundColorOrange()">Orange</a>
+                                    <a onclick="backgroundColorGreen()">Green</a>
+                                </div>
+                                <div class="dropdown_menu_style">
+                                    <a class="font-text">Title Color:</a>
+                                    <a onclick="OriginalColor()">Original title</a>
+                                    <a onclick="titleColorRed()">Red title</a>
+                                    <a onclick="titleColorblue()">Blue title</a>
+                                    <a onclick="titleColorpink()">Pink title</a>
+                                    <a onclick="titleColororange()">Orange title</a>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="login" id="login-disable">
+                    <p><a href="assets/pages/Login.html"><i class="fa fa-lock"></i> Login </a>
+                        <a href="assets/pages/Signup.html"><i class="fa fa-plus"></i> Signup </a>
+                        <a onclick="darkMode()" style="background: none;"><i class="fa-light fa-lightbulb-o"
+                                aria-hidden="true"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header - End -->
+
+    <!-- One section - Start -->
+    <div class="main-container">
+        <h1>Welcome to our Zoo</h1>
+        <div class="main-box">
+            <div class="one-box">
+                <img src="assets/image/cover/13.jpg" alt="tiger">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+            <div class="two-box">
+                <img src="assets/image/cover/14.jpg" alt="tiger">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- One section - End -->
+
+    <!-- Two section - Start -->
+    <div class="main-container">
+        <div class="main-box-two-section">
+            <div class="two-one-box">
+                <img src="assets/image/cover/15.jpg" alt="deer">
+
+            </div>
+        </div>
+    </div>
+    <!-- Two section - End -->
+
+    <!-- Three section - Start -->
+    <div class="main-container">
+        <div class="main-box-two">
+            <div class="one-box">
+                <img src="assets/image/cover/16.jpg" alt="tiger">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+            <div class="two-box">
+                <img src="assets/image/cover/17.jpg" alt="tiger">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Three section - End -->
+
+    <!-- Four section - Start -->
+    <div class="main-container">
+        <div class="main-box-two">
+            <div class="one-box" style="display: flex; justify-content: center;">
+                <img src="assets/image/cover/28.jpg" alt="tiger">
+            </div>
+            <div class="two-box">
+                <h2>We also have lion</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Four section - End -->
+
+    <!-- Five section - Start -->
+    <div class="main-container">
+        <div class="main-box-two-section">
+            <div class="two-one-box">
+                <img src="assets/image/cover/32.jpg" alt="deer">
+            </div>
+        </div>
+    </div>
+    <!-- Five section - End -->
+
+    <!-- Six section - Start -->
+    <div class="main-container">
+        <div class="main-box-two">
+            <div class="two-box">
+                <h2>Our lovely panda</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+            <div class="two-box">
+                <h2>Fourteen foxes</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Six section - End -->
+
+    <!-- Seven section - Start -->
+    <div class="main-container">
+        <div class="main-box-two">
+            <div class="one-box" style="display: flex; justify-content: center;">
+                <img src="assets/image/cover/30.jpg" alt="panda">
+            </div>
+            <div class="two-box">
+                <img src="assets/image/cover/29.jpg" alt="fox">
+            </div>
+        </div>
+    </div>
+    <!-- Seven section - End -->
+
+    <!-- Eight section - Start -->
+    <div class="main-container">
+        <div class="main-box-two">
+            <div class="two-box">
+                <h2> Rabbit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+            <div class="two-box">
+                <h2>Ten kangoroo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Eight section - End -->
+
+    <!-- Nine section - Start -->
+    <div class="main-container">
+        <div class="main-box-two">
+            <div class="one-box" style="display: flex; justify-content: center;">
+                <img src="assets/image/cover/34.jpg" alt="rabit">
+            </div>
+            <div class="two-box">
+                <img src="assets/image/cover/33.jpg" alt="kangoroo">
+            </div>
+        </div>
+    </div>
+    <!-- Nine section - End -->
+
+    <!-- Ten section - Start -->
+    <div class="main-container">
+        <div class="main-box-two">
+            <div class="two-box">
+                <h2> Northern giraffe </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+            <div class="two-box">
+                <h2>Elephant</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Ten section - End -->
+
+    <!-- Eleven section - Start -->
+    <div class="main-container">
+        <div class="main-box-two-section">
+            <div class="two-one-box">
+                <img src="assets/image/cover/121.jpg" alt="deer">
+
+            </div>
+        </div>
+    </div>
+    <!-- Eleven section - End -->
+
+    <!-- Twelve section - Start -->
+    <div class="main-container">
+        <div class="main-box-two">
+            <div class="two-box">
+                <h2>Australian Labradoodle</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+            <div class="two-box">
+                <h2>African Monkeys</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+            <div class="two-box">
+                <h2>Alaskan Malamute</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nobis id temporibus
+                    voluptate odit molestias itaque, reprehenderit porro, quae accusantium perspiciatis qui
+                    voluptatibus nihil. Labore expedita voluptatum laudantium dolorum a.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Twelve section - End -->
+
+    <!-- Thirteen section - Start -->
+    <div class="main-container">
+        <h2>Our nature</h2>
+        <div class="main-box-three">
+            <div class="three-one-box">
+                <img src="assets/image/cover/18.jpg" alt="nature">
+            </div>
+            <div class="three-two-box">
+                <img src="assets/image/cover/19.jpg" alt="nature">
+            </div>
+            <div class="three-two-box">
+                <img src="assets/image/cover/22.png" alt="nature">
+            </div>
+        </div>
+    </div>
+    <!-- Thirteen section - End -->
+
+    <!-- Fourteen section - Start -->
+    <div class="main-container">
+        <div class="main-box-three">
+            <div class="four-one-box">
+                <img src="assets/image/cover/21.jpg" alt="nature">
+            </div>
+        </div>
+    </div>
+    <!-- Fourteen section - End -->
+
+    <!-- Fiveteen section - Start -->
+    <div class="main-container">
+        <div class="main-box-three">
+            <div class="three-one-box">
+                <img src="assets/image/cover/25.jpg" alt="nature">
+            </div>
+            <div class="three-two-box">
+                <img src="assets/image/cover/26.jpg" alt="nature">
+            </div>
+            <div class="three-two-box">
+                <img src="assets/image/cover/27.jpg" alt="nature">
+            </div>
+        </div>
+    </div>
+    <!-- Fiveteen section - End -->
+
+    <!-- Sixteen section - Start -->
+    <div class="main-container">
+        <div class="main-box-three">
+            <div class="four-one-box">
+                <img src="assets/image/cover/31.jpg" alt="nature">
+            </div>
+        </div>
+    </div>
+    <!-- Sixteen section - End -->
+
+    <!-- Our member section - Start -->
+    <div class="main-container">
+        <h2>Our member</h2>
+        <div class="main-box-three">
+            <div class="three-one-box-detail">
+                <img src="assets/image/member/1.jpg" alt="member">
+                <p>Name: Isabella Brown</p>
+                <p>Position: Zoo Director</p>
+                <p>Email: Isabella@gmail.com</p>
+                <div class="social-icons">
+                    <p>Social:
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="three-one-box-detail">
+                <img src="assets/image/member/2.jpg" alt="member">
+                <p>Name: Sophia Johnson</p>
+                <p>Position: Curator</p>
+                <p>Email: Sophiaas@gmail.com</p>
+                <div class="social-icons">
+                    <p>Social:
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="three-one-box-detail">
+                <img src="assets/image/member/3.jpg" alt="member">
+                <p>Name: Emily Davies</p>
+                <p>Position: Veterinarian</p>
+                <p>Email: Emily121@gmail.com</p>
+                <div class="social-icons">
+                    <p>Social:
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="main-box-three">
+            <div class="three-one-box-detail">
+                <img src="assets/image/member/4.jpg" alt="member">
+                <p>Name: Ava Roberts</p>
+                <p>Position: Head Keeper</p>
+                <p>Email: Avarober@gmail.com</p>
+                <div class="social-icons">
+                    <p>Social:
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="three-one-box-detail">
+                <img src="assets/image/member/5.jpg" alt="member">
+                <p>Name: Sienna Lee</p>
+                <p>Position: Oper. Director</p>
+                <p>Email: Sienna55@gmail.com</p>
+                <div class="social-icons">
+                    <p>Social:
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="three-one-box-detail">
+                <img src="assets/image/member/6.jpg" alt="member">
+                <p>Name: Luna Thompson</p>
+                <p>Position: Pb. Relations</p>
+                <p>Email: Lunathom@gmail.com</p>
+                <div class="social-icons">
+                    <p>Social:
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our member section - End -->
+
+    <!-- Back to top Button - Start -->
+    <i onclick="topFunction()" id="Back-to-top-Button" class="fa fa-chevron-up"></i>
+    <!-- Back to top Button - End -->
+
+    <!-- Sticky Social Media Bar - Start -->
+    <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="vimeo"><i class="fa fa-vimeo"></i></a>
+    </div>
+    <!-- Sticky Social Media Bar - End -->
+
+    <!-- Divider - Start -->
+    <div class="divider"></div>
+    <!-- Divider - End -->
+
+    <!-- Footer - Start -->
+    <footer>
+        <div class="main-container">
+            <div class="footer-flex">
+                <div class="footer-box">
+                    <h2>OUR ZOO</h2>
+                    <p>Our zoo founded 1999 years old.we have many visitors.we have many animals and birds.
+                        you must see this zoo.
+                    </p>
+                </div>
+                <div class="footer-box">
+                    <h2>LOCATION</h2>
+                    <p>Country: Georgia ,Tbilisi.</p>
+                    <p>Street: vaja-fshavela's 27.</p>
+                </div>
+                <div class="footer-box">
+                    <h2>CONTACT</h2>
+                    <p> <i class="fa fa-envelope"></i> : Zoo_info@mail.com</p>
+                    <p> <i class="fa fa-phone"></i> : +995 XXX XXX XXX</p>
+                    <p> <i class="fa fa-fax"></i> : +01 XXX XXX XXX</p>
+                </div>
+            </div>
+            <div class="footer-box-logo">
+                <div>
+                    <img src="assets/image/logo/max-logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="footer-end">
+                <p>© 2021 Copyright: Max company</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer - End -->
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/scroll-top-button.js"></script>
+</body>
+
+</html>
